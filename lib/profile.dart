@@ -6,6 +6,11 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Moj profil"),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.orange.shade800,
+      ),
       backgroundColor: Colors.brown.shade100,
       body: SingleChildScrollView(
           child: Column(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
+import 'categories/categoryTable.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -31,17 +33,12 @@ class _RootPage extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> _children = [
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    ProfilePage(),
+    const HomePage(),
+    const CategoryTable(),
+    const HomePage(),
+    const ProfilePage(),
   ];
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Kategorije namještaja"),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.orange.shade800,
-      ),
       body:_children[currentPage],
       bottomNavigationBar: NavigationBar(
         backgroundColor: Colors.grey.shade300,

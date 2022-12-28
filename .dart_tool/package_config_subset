@@ -1,7 +1,7 @@
 test_app
 2.18
-file:///C:/Users/Rac/Documents/AIR2210/
-file:///C:/Users/Rac/Documents/AIR2210/lib/
+file:///C:/Users/Rac/Documents/test_app/
+file:///C:/Users/Rac/Documents/test_app/lib/
 async
 2.14
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/
@@ -34,6 +34,10 @@ flutter_lints
 2.17
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1/lib/
+flutter_rating_bar
+2.14
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_rating_bar-4.0.1/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_rating_bar-4.0.1/lib/
 lints
 2.17
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0/

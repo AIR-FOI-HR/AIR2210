@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/help.dart';
+import 'package:test_app/prijava_odjava/login.dart';
+import 'package:test_app/prijava_odjava/logout.dart';
 import 'package:test_app/settings.dart';
 
 import 'profile_data.dart';
@@ -121,6 +123,58 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: Row(children: const [
+                        Icon(Icons.login_outlined),
+                        Text(' Prijava'),
+                      ]),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LogoutPage()));
+                      },
+                      child: Row(children: const [
+                        Icon(Icons.logout_outlined),
+                        Text(' Odjava'),
+                      ]),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       )),

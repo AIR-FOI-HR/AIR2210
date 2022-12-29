@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/help.dart';
+import 'package:test_app/settings.dart';
+
+import 'profile_data.dart';
+import 'orders.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -27,9 +32,20 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(Icons.settings),
-                  Text(' Postavke'),
+                children: [
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SettingsPage()));
+                    },
+                    child: Row(children: const [
+                      Icon(Icons.settings),
+                      Text(' Postavke'),
+                    ]),
+                  )
                 ],
               ),
             ),
@@ -40,9 +56,20 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(Icons.checklist),
-                  Text(' Korisnički podaci'),
+                children: [
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProfileDataPage()));
+                    },
+                    child: Row(children: const [
+                      Icon(Icons.checklist),
+                      Text(' Korisnički podaci'),
+                    ]),
+                  )
                 ],
               ),
             ),
@@ -53,9 +80,20 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(Icons.shopping_cart),
-                  Text(' Moje narudžbe'),
+                children: [
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const OrdersPage()));
+                    },
+                    child: Row(children: const [
+                      Icon(Icons.shopping_cart),
+                      Text(' Moje narudžbe'),
+                    ]),
+                  )
                 ],
               ),
             ),
@@ -66,9 +104,20 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
-                  Icon(Icons.help),
-                  Text(' Pomoć'),
+                children: [
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HelpPage()));
+                    },
+                    child: Row(children: const [
+                      Icon(Icons.help),
+                      Text(' Pomoć'),
+                    ]),
+                  )
                 ],
               ),
             ),

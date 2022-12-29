@@ -40,3 +40,20 @@ replay_pid*
 bin/
 .vscode/
 *.code-workspace
+
+# Dart
+
+.dart_tool/
+.packages
+build/
+pubspec.lock
+doc/api/
+.env*
+*.dart.js
+*.info.json
+*.js_
+*.js.deps
+*.js.map
+
+.flutter-plugins
+.flutter-plugins-dependencies

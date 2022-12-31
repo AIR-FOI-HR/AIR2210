@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
-void main() {
+import 'categories/categoryTable.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -31,18 +39,13 @@ class _RootPage extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> _children = [
-    HomePage(),
-    HomePage(),
-    HomePage(),
-    ProfilePage(),
-  ];
+      const HomePage(),
+      const CategoryTable(),
+      const HomePage(),
+      const ProfilePage(),
+    ];
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Kategorije namještaja"),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.orange.shade800,
-      ),
-      body:_children[currentPage],
+      body: _children[currentPage],
       bottomNavigationBar: NavigationBar(
         backgroundColor: Colors.grey.shade300,
         destinations: const [

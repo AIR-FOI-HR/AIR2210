@@ -8,6 +8,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Kategorije namještaja"),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.orange.shade800,
+      ),
       backgroundColor: Colors.brown.shade100,
       body: SingleChildScrollView(
           child: Column(
@@ -48,7 +53,7 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Expanded(
                 child: Text(""),
                 flex: 1,
@@ -109,7 +114,7 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: const [
               Expanded(
                 child: Text(""),
                 flex: 1,
@@ -170,7 +175,7 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: const [
               Expanded(
                 child: Text(""),
                 flex: 1,
@@ -231,7 +236,7 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: const [
               Expanded(
                 child: Text(""),
                 flex: 1,

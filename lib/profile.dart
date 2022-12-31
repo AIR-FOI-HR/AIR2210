@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/help.dart';
-import 'package:test_app/settings.dart';
-
-import 'profile_data.dart';
-import 'orders.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -11,6 +6,11 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Moj profil"),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.orange.shade800,
+      ),
       backgroundColor: Colors.brown.shade100,
       body: SingleChildScrollView(
           child: Column(
@@ -32,20 +32,9 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SettingsPage()));
-                    },
-                    child: Row(children: const [
-                      Icon(Icons.settings),
-                      Text(' Postavke'),
-                    ]),
-                  )
+                children: const [
+                  Icon(Icons.settings),
+                  Text(' Postavke'),
                 ],
               ),
             ),
@@ -56,20 +45,9 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ProfileDataPage()));
-                    },
-                    child: Row(children: const [
-                      Icon(Icons.checklist),
-                      Text(' Korisnički podaci'),
-                    ]),
-                  )
+                children: const [
+                  Icon(Icons.checklist),
+                  Text(' Korisnički podaci'),
                 ],
               ),
             ),
@@ -80,20 +58,9 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const OrdersPage()));
-                    },
-                    child: Row(children: const [
-                      Icon(Icons.shopping_cart),
-                      Text(' Moje narudžbe'),
-                    ]),
-                  )
+                children: const [
+                  Icon(Icons.shopping_cart),
+                  Text(' Moje narudžbe'),
                 ],
               ),
             ),
@@ -104,20 +71,9 @@ class ProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  GestureDetector(
-                    behavior: HitTestBehavior.translucent,
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HelpPage()));
-                    },
-                    child: Row(children: const [
-                      Icon(Icons.help),
-                      Text(' Pomoć'),
-                    ]),
-                  )
+                children: const [
+                  Icon(Icons.help),
+                  Text(' Pomoć'),
                 ],
               ),
             ),

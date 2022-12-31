@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "306538288927",
+    "firebase_url": "https://air-projekt-bamboo-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "air-projekt-bamboo",
+    "storage_bucket": "air-projekt-bamboo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306538288927:android:fc258e16bafb02d4b8022a",
+        "android_client_info": {
+          "package_name": "com.example.test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306538288927-2bjqfmo85cjjlgmc4d6s48tk0nmujn80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxe3gE2LatxTVF5lW_5sevRlLCIVsDl0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306538288927-2bjqfmo85cjjlgmc4d6s48tk0nmujn80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

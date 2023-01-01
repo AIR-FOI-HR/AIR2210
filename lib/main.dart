@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/categories/categoryChair.dart';
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
@@ -40,7 +41,7 @@ class _RootPage extends State<RootPage> {
   Widget build(BuildContext context) {
     final List<Widget> _children = [
       const HomePage(),
-      const CategoryTable(),
+      const CategoryChair(),
       const HomePage(),
       const ProfilePage(),
     ];

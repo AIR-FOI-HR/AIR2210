@@ -14,17 +14,17 @@ class Product {
   }
 }
 
-class CategoryTable extends StatelessWidget {
-  const CategoryTable({super.key});
+class CategoryChair extends StatelessWidget {
+  const CategoryChair({super.key});
 
   @override
   Widget build(BuildContext context) {
     CollectionReference products =
-        FirebaseFirestore.instance.collection('tables');
+        FirebaseFirestore.instance.collection('chairs');
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Stolovi"),
+        title: const Text("Stolice"),
         foregroundColor: Colors.white,
         backgroundColor: Colors.orange.shade800,
       ),

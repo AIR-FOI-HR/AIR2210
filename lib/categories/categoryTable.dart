@@ -48,8 +48,8 @@ class CategoryTable extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
-                        width: 200,
-                        height: 200,
+                        width: 150,
+                        height: 150,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.fill,

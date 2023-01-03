@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/categories/categoryChair.dart';
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
-import 'categories/categoryBed.dart';
-import 'categories/categoryTable.dart';
+import 'categories/categoryDoor.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -42,7 +40,7 @@ class _RootPage extends State<RootPage> {
   Widget build(BuildContext context) {
     final List<Widget> _children = [
       const HomePage(),
-      const CategoryBed(),
+      const CategoryDoor(),
       const HomePage(),
       const ProfilePage(),
     ];

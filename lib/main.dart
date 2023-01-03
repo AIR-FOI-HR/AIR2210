@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+
+import 'package:test_app/categories/categoryWardrobe.dart';
+import 'package:test_app/categories/categoryBathroom.dart';
+import 'package:test_app/categories/categoryBench.dart';
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
@@ -40,7 +44,7 @@ class _RootPage extends State<RootPage> {
   Widget build(BuildContext context) {
     final List<Widget> _children = [
       const HomePage(),
-      const CategoryMirror(),
+      const CategoryBathroom(),
       const HomePage(),
       const ProfilePage(),
     ];

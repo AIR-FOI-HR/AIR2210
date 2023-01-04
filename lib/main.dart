@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/categories/categoryTable.dart';
 
 import 'package:test_app/categories/categoryWardrobe.dart';
 import 'package:test_app/categories/categoryBathroom.dart';
@@ -7,7 +8,7 @@ import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'categories/categoryMirror.dart';
+import 'categories/categoryTable.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -44,7 +45,7 @@ class _RootPage extends State<RootPage> {
   Widget build(BuildContext context) {
     final List<Widget> _children = [
       const HomePage(),
-      const CategoryBathroom(),
+      const CategoryTable(),
       const HomePage(),
       const ProfilePage(),
     ];

@@ -35,7 +35,13 @@ class CategoryTable extends StatelessWidget {
           if (snapshot.hasData) {
             // Collection data available, store it in a list
             List<DocumentSnapshot> documents = snapshot.data!.docs;
-            List data = documents.map((document) => document.data()).toList();
+            List data = documents
+                .map((document) =>
+                    {
+                      "data": document.data(), 
+                      "id": document.id
+                    })
+                .toList();
             return ListView.builder(
               itemCount: data.length,
               itemBuilder: (context, index) {
@@ -53,8 +59,7 @@ class CategoryTable extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage(data[index]['image'])
-                          ),
+                              image: AssetImage(data[index]['data']['image'])),
                         ),
                       ),
                       Column(
@@ -67,7 +72,7 @@ class CategoryTable extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  data[index]['name'],
+                                  data[index]['data']['name'],
                                   style: const TextStyle(fontSize: 25),
                                 ),
                               ),
@@ -76,7 +81,7 @@ class CategoryTable extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 30),
                               child: RatingBar.builder(
-                                initialRating: data[index]['rating'].toDouble(),
+                                initialRating: data[index]['data']['rating'].toDouble(),
                                 minRating: 1,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
@@ -99,7 +104,7 @@ class CategoryTable extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  data[index]['price'],
+                                  data[index]['data']['price'],
                                   style: const TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold),

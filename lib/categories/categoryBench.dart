@@ -20,7 +20,7 @@ class CategoryBench extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CollectionReference products =
-        FirebaseFirestore.instance.collection('benches');
+        FirebaseFirestore.instance.collection(' benches');
 
     return Scaffold(
       appBar: AppBar(
@@ -35,10 +35,9 @@ class CategoryBench extends StatelessWidget {
           if (snapshot.hasData) {
             // Collection data available, store it in a list
             List<DocumentSnapshot> documents = snapshot.data!.docs;
-            List data = documents.map((document) => {
-                      "data": document.data(), 
-                      "id": document.id
-                    }).toList();
+            List data = documents
+                .map((document) => {"data": document.data(), "id": document.id})
+                .toList();
             return ListView.builder(
               itemCount: data.length,
               itemBuilder: (context, index) {
@@ -56,12 +55,7 @@ class CategoryBench extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.fill,
-<<<<<<< HEAD
-                              image: AssetImage(data[index]['data']['image'])
-                          ),
-=======
-                              image: AssetImage(data[index]['image'])),
->>>>>>> ejelacic_progress
+                              image: AssetImage(data[index]['data']['image'])),
                         ),
                       ),
                       Column(
@@ -83,7 +77,8 @@ class CategoryBench extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 30),
                               child: RatingBar.builder(
-                                initialRating: data[index]['data']['rating'].toDouble(),
+                                initialRating:
+                                    data[index]['data']['rating'].toDouble(),
                                 minRating: 1,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,

@@ -33,387 +33,401 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Card(
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CategoryTable()),
-                              );
-                            },
-                            child: Image.asset('images/stol.jpg'),
-                          ),
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryTable()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/stol.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ),
-                  flex: 1,
                 ),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CategoryChair()),
-                              );
-                            },
-                            child: Image.asset('images/stolica.jpg'),
-                          ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryChair()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/stolica.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CategoryBed()),
-                              );
-                            },
-                            child: Image.asset('images/bed.jpg'),
-                          ),
+                  ),
+                ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryBed()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/bed.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
+                  ),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    height: 50,
+                    width: 125,
+                    child: Text("Stol", textAlign: TextAlign.center),
+                  ),
                 ),
-                Expanded(
-                  child: Text("Stol"),
-                  flex: 2,
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Stolica", textAlign: TextAlign.center),
                 ),
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
-                ),
-                Expanded(
-                  child: Text("Stolica"),
-                  flex: 2,
-                ),
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
-                ),
-                Expanded(
-                  child: Text("Krevet"),
-                  flex: 2,
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Krevet", textAlign: TextAlign.center),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CategorySofa()),
-                              );
-                            },
-                            child: Image.asset('images/sofa.jpg'),
-                          ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategorySofa()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/sofa.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CategoryRack()),
-                              );
-                            },
-                            child: Image.asset('images/regal.jpg'),
-                          ),
+                  ),
+                ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryRack()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/regal.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CategoryDoor()),
-                              );
-                            },
-                            child: Image.asset('images/vrata.jpg'),
-                          ),
+                  ),
+                ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryDoor()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/vrata.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
+                  ),
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    height: 50,
+                    width: 125,
+                    child: Text("Sofa", textAlign: TextAlign.center),
+                  ),
                 ),
-                Expanded(
-                  child: Text("Sofa"),
-                  flex: 2,
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Regal", textAlign: TextAlign.center),
                 ),
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
-                ),
-                Expanded(
-                  child: Text("Regal"),
-                  flex: 2,
-                ),
-                Expanded(
-                  child: Text(""),
-                  flex: 1,
-                ),
-                Expanded(
-                  child: Text("Vrata"),
-                  flex: 2,
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Vrata", textAlign: TextAlign.center),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CategoryWindow()),
-                              );
-                            },
-                            child: Image.asset('images/prozor.jpg'),
-                          ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryWindow()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/prozor.jpg',
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    flex: 1),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CategoryMirror()),
-                              );
-                            },
-                            child: Image.asset('images/ogledalo.jpg'),
-                          ),
-                        ),
-                      ),
-                    ),
-                    flex: 1),
-                Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Card(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CategoryWardrobe()),
-                              );
-                            },
-                            child: Image.asset('images/ormar.jpg'),
-                          ),
-                        ),
-                      ),
-                    ),
-                    flex: 1),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
-                    ),
-                    Expanded(
-                      child: Text("Prozor"),
-                      flex: 2,
-                    ),
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
-                    ),
-                    Expanded(
-                      child: Text("Ogledalo"),
-                      flex: 2,
-                    ),
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
-                    ),
-                    Expanded(
-                      child: Text("Ormar"),
-                      flex: 2,
-                    ),
-                  ],
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const CategoryBathroom()),
-                                  );
-                                },
-                                child: Image.asset('images/kupaona.jpg'),
-                              ),
-                            ),
-                          ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryMirror()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/ogledalo.jpg',
+                          fit: BoxFit.cover,
                         ),
-                        flex: 1),
-                    Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const CategoryBench()),
-                                  );
-                                },
-                                child: Image.asset('images/klupa.jpg'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        flex: 1),
-                    Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Card(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const CategoryArmachair()),
-                                  );
-                                },
-                                child: Image.asset('images/fotelja.jpg'),
-                              ),
-                            ),
-                          ),
-                        ),
-                        flex: 1),
-                  ],
+                      ),
+                    ),
+                  ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryWardrobe()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/ormar.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Expanded(
-                      child: Text("Kupaona"),
-                      flex: 2,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    height: 50,
+                    width: 125,
+                    child: Text("Prozor", textAlign: TextAlign.center),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Ogledalo", textAlign: TextAlign.center),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Ormar", textAlign: TextAlign.center),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryBathroom()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/kupaona.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
+                  ),
+                ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryBench()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/klupa.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Expanded(
-                      child: Text("Klupa"),
-                      flex: 2,
+                  ),
+                ),
+                Container(
+                  height: 125,
+                  width: 125,
+                  color: Colors.brown.shade100,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const CategoryArmachair()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/fotelja.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                    Expanded(
-                      child: Text(""),
-                      flex: 1,
-                    ),
-                    Expanded(
-                      child: Text("Fotelja"),
-                      flex: 2,
-                    ),
-                  ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: SizedBox(
+                    height: 50,
+                    width: 125,
+                    child: Text("Kupaona", textAlign: TextAlign.center),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Klupa", textAlign: TextAlign.center),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 125,
+                  child: Text("Fotelja", textAlign: TextAlign.center),
                 ),
               ],
             ),

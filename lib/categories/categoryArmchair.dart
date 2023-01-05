@@ -1,6 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Product {
   late String name;
@@ -14,17 +14,17 @@ class Product {
   }
 }
 
-class CategoryBench extends StatelessWidget {
-  const CategoryBench({super.key});
+class CategoryArmachair extends StatelessWidget {
+  const CategoryArmachair({super.key});
 
   @override
   Widget build(BuildContext context) {
     CollectionReference products =
-        FirebaseFirestore.instance.collection('benches');
+        FirebaseFirestore.instance.collection('armchairs');
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Klupe"),
+        title: const Text("Fotelje"),
         foregroundColor: Colors.white,
         backgroundColor: Colors.orange.shade800,
       ),

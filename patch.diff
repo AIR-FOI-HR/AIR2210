@@ -1,0 +1,750 @@
+diff --git a/lib/categories/categoryBench.dart b/lib/categories/categoryBench.dart
+index 1d57220..4e9f078 100644
+--- a/lib/categories/categoryBench.dart
++++ b/lib/categories/categoryBench.dart
+@@ -20,7 +20,7 @@ class CategoryBench extends StatelessWidget {
+   @override
+   Widget build(BuildContext context) {
+     CollectionReference products =
+-    FirebaseFirestore.instance.collection('benches');
++        FirebaseFirestore.instance.collection('benches');
+ 
+     return Scaffold(
+       appBar: AppBar(
+@@ -53,8 +53,7 @@ class CategoryBench extends StatelessWidget {
+                         decoration: BoxDecoration(
+                           image: DecorationImage(
+                               fit: BoxFit.fill,
+-                              image: AssetImage(data[index]['image'])
+-                          ),
++                              image: AssetImage(data[index]['image'])),
+                         ),
+                       ),
+                       Column(
+@@ -83,7 +82,7 @@ class CategoryBench extends StatelessWidget {
+                                 itemCount: 5,
+                                 itemSize: 15,
+                                 itemPadding:
+-                                const EdgeInsets.symmetric(horizontal: 4.0),
++                                    const EdgeInsets.symmetric(horizontal: 4.0),
+                                 itemBuilder: (context, _) => const Icon(
+                                   Icons.star,
+                                   color: Colors.amber,
+diff --git a/lib/home_page.dart b/lib/home_page.dart
+index d447c9e..996536c 100644
+--- a/lib/home_page.dart
++++ b/lib/home_page.dart
+@@ -1,6 +1,18 @@
+ // ignore_for_file: sort_child_properties_last
+ 
+ import 'package:flutter/material.dart';
++import 'package:test_app/categories/categoryWardrobe.dart';
++import 'package:test_app/categories/categoryArmchair.dart';
++import 'package:test_app/categories/categoryChair.dart';
++import 'package:test_app/categories/categorySofa.dart';
++import 'package:test_app/categories/categoryBathroom.dart';
++import 'package:test_app/categories/categoryBench.dart';
++import 'package:test_app/categories/categoryBed.dart';
++import 'package:test_app/categories/categoryDoor.dart';
++import 'package:test_app/categories/categoryMirror.dart';
++import 'package:test_app/categories/categoryRack.dart';
++import 'package:test_app/categories/categoryTable.dart';
++import 'package:test_app/categories/categoryWindow.dart';
+ 
+ class HomePage extends StatelessWidget {
+   const HomePage({super.key});
+@@ -15,256 +27,399 @@ class HomePage extends StatelessWidget {
+       ),
+       backgroundColor: Colors.brown.shade100,
+       body: SingleChildScrollView(
+-          child: Column(
+-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+-        children: [
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: [
+-              Expanded(
+-                child: Padding(
+-                  padding: const EdgeInsets.all(20.0),
+-                  child: ClipRRect(
+-                    borderRadius: BorderRadius.circular(20),
+-                    child: Image.asset('images/stol.jpg'),
+-                  ),
+-                ),
+-                flex: 1,
+-              ),
+-              Expanded(
++        child: Column(
++          mainAxisAlignment: MainAxisAlignment.spaceAround,
++          children: [
++            Row(
++              mainAxisAlignment: MainAxisAlignment.center,
++              children: [
++                Expanded(
+                   child: Padding(
+                     padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/stolica.jpg'),
++                    child: Card(
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) =>
++                                        const CategoryTable()),
++                              );
++                            },
++                            child: Image.asset('images/stol.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+                   ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/bed.jpg'),
++                  flex: 1,
++                ),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) =>
++                                        const CategoryChair()),
++                              );
++                            },
++                            child: Image.asset('images/stolica.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: const [
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Stol"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Stolica"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Krevet"),
+-                flex: 2,
+-              ),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: [
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/sofa.jpg'),
++                    flex: 1),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) => const CategoryBed()),
++                              );
++                            },
++                            child: Image.asset('images/bed.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/regal.jpg'),
++                    flex: 1),
++              ],
++            ),
++            Row(
++              mainAxisAlignment: MainAxisAlignment.center,
++              children: const [
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Stol"),
++                  flex: 2,
++                ),
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Stolica"),
++                  flex: 2,
++                ),
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Krevet"),
++                  flex: 2,
++                ),
++              ],
++            ),
++            Row(
++              mainAxisAlignment: MainAxisAlignment.center,
++              children: [
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) => const CategorySofa()),
++                              );
++                            },
++                            child: Image.asset('images/sofa.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/vrata.jpg'),
++                    flex: 1),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) => const CategoryRack()),
++                              );
++                            },
++                            child: Image.asset('images/regal.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+-            children: const [
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Sofa"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Regal"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Vrata"),
+-                flex: 2,
+-              ),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: [
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/prozor.jpg'),
++                    flex: 1),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) => const CategoryDoor()),
++                              );
++                            },
++                            child: Image.asset('images/vrata.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/ogledalo.jpg'),
++                    flex: 1),
++              ],
++            ),
++            Row(
++              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
++              children: const [
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Sofa"),
++                  flex: 2,
++                ),
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Regal"),
++                  flex: 2,
++                ),
++                Expanded(
++                  child: Text(""),
++                  flex: 1,
++                ),
++                Expanded(
++                  child: Text("Vrata"),
++                  flex: 2,
++                ),
++              ],
++            ),
++            Row(
++              mainAxisAlignment: MainAxisAlignment.center,
++              children: [
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) =>
++                                        const CategoryWindow()),
++                              );
++                            },
++                            child: Image.asset('images/prozor.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/ormar.jpg'),
++                    flex: 1),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) =>
++                                        const CategoryMirror()),
++                              );
++                            },
++                            child: Image.asset('images/ogledalo.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+-            children: const [
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Prozor"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Ogledalo"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Ormar"),
+-                flex: 2,
+-              ),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.center,
+-            children: [
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/kupaona.jpg'),
++                    flex: 1),
++                Expanded(
++                    child: Padding(
++                      padding: const EdgeInsets.all(20.0),
++                      child: Card(
++                        child: ClipRRect(
++                          borderRadius: BorderRadius.circular(20),
++                          child: GestureDetector(
++                            onTap: () {
++                              Navigator.push(
++                                context,
++                                MaterialPageRoute(
++                                    builder: (context) =>
++                                        const CategoryWardrobe()),
++                              );
++                            },
++                            child: Image.asset('images/ormar.jpg'),
++                          ),
++                        ),
++                      ),
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/fotelja.jpg'),
++                    flex: 1),
++                Row(
++                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
++                  children: const [
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
+                     ),
+-                  ),
+-                  flex: 1),
+-              Expanded(
+-                  child: Padding(
+-                    padding: const EdgeInsets.all(20.0),
+-                    child: ClipRRect(
+-                      borderRadius: BorderRadius.circular(20),
+-                      child: Image.asset('images/klupa.jpg'),
++                    Expanded(
++                      child: Text("Prozor"),
++                      flex: 2,
+                     ),
+-                  ),
+-                  flex: 1),
+-            ],
+-          ),
+-          Row(
+-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+-            children: const [
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Kupaona"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Fotelja"),
+-                flex: 2,
+-              ),
+-              Expanded(
+-                child: Text(""),
+-                flex: 1,
+-              ),
+-              Expanded(
+-                child: Text("Klupa"),
+-                flex: 2,
+-              ),
+-            ],
+-          ),
+-        ],
+-      )),
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
++                    ),
++                    Expanded(
++                      child: Text("Ogledalo"),
++                      flex: 2,
++                    ),
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
++                    ),
++                    Expanded(
++                      child: Text("Ormar"),
++                      flex: 2,
++                    ),
++                  ],
++                ),
++                Row(
++                  mainAxisAlignment: MainAxisAlignment.center,
++                  children: [
++                    Expanded(
++                        child: Padding(
++                          padding: const EdgeInsets.all(20.0),
++                          child: Card(
++                            child: ClipRRect(
++                              borderRadius: BorderRadius.circular(20),
++                              child: GestureDetector(
++                                onTap: () {
++                                  Navigator.push(
++                                    context,
++                                    MaterialPageRoute(
++                                        builder: (context) =>
++                                            const CategoryBathroom()),
++                                  );
++                                },
++                                child: Image.asset('images/kupaona.jpg'),
++                              ),
++                            ),
++                          ),
++                        ),
++                        flex: 1),
++                    Expanded(
++                        child: Padding(
++                          padding: const EdgeInsets.all(20.0),
++                          child: Card(
++                            child: ClipRRect(
++                              borderRadius: BorderRadius.circular(20),
++                              child: GestureDetector(
++                                onTap: () {
++                                  Navigator.push(
++                                    context,
++                                    MaterialPageRoute(
++                                        builder: (context) =>
++                                            const CategoryBench()),
++                                  );
++                                },
++                                child: Image.asset('images/klupa.jpg'),
++                              ),
++                            ),
++                          ),
++                        ),
++                        flex: 1),
++                    Expanded(
++                        child: Padding(
++                          padding: const EdgeInsets.all(20.0),
++                          child: Card(
++                            child: ClipRRect(
++                              borderRadius: BorderRadius.circular(20),
++                              child: GestureDetector(
++                                onTap: () {
++                                  Navigator.push(
++                                    context,
++                                    MaterialPageRoute(
++                                        builder: (context) =>
++                                            const CategoryArmachair()),
++                                  );
++                                },
++                                child: Image.asset('images/fotelja.jpg'),
++                              ),
++                            ),
++                          ),
++                        ),
++                        flex: 1),
++                  ],
++                ),
++                Row(
++                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
++                  children: const [
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
++                    ),
++                    Expanded(
++                      child: Text("Kupaona"),
++                      flex: 2,
++                    ),
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
++                    ),
++                    Expanded(
++                      child: Text("Klupa"),
++                      flex: 2,
++                    ),
++                    Expanded(
++                      child: Text(""),
++                      flex: 1,
++                    ),
++                    Expanded(
++                      child: Text("Fotelja"),
++                      flex: 2,
++                    ),
++                  ],
++                ),
++              ],
++            ),
++          ],
++        ),
++      ),
+     );
+   }
+ }
+diff --git a/lib/main.dart b/lib/main.dart
+index be545ad..81be463 100644
+--- a/lib/main.dart
++++ b/lib/main.dart
+@@ -1,13 +1,20 @@
+ import 'package:flutter/material.dart';
+-
++import 'package:test_app/categories/categoryArmchair.dart';
++import 'package:test_app/categories/categoryChair.dart';
++import 'package:test_app/categories/categorySofa.dart';
+ import 'package:test_app/categories/categoryWardrobe.dart';
+ import 'package:test_app/categories/categoryBathroom.dart';
+ import 'package:test_app/categories/categoryBench.dart';
++import 'package:test_app/categories/categoryBed.dart';
++import 'package:test_app/categories/categoryDoor.dart';
++import 'package:test_app/categories/categoryMirror.dart';
++import 'package:test_app/categories/categoryRack.dart';
++import 'package:test_app/categories/categoryTable.dart';
++import 'package:test_app/categories/categoryWindow.dart';
++
+ import 'package:test_app/home_page.dart';
+ import 'package:test_app/profile.dart';
+-
+ import 'package:firebase_core/firebase_core.dart';
+-import 'categories/categoryMirror.dart';
+ import 'firebase_options.dart';
+ 
+ void main() async {
+@@ -44,7 +51,7 @@ class _RootPage extends State<RootPage> {
+   Widget build(BuildContext context) {
+     final List<Widget> _children = [
+       const HomePage(),
+-      const CategoryBathroom(),
++      const CategoryBench(),
+       const HomePage(),
+       const ProfilePage(),
+     ];
+diff --git a/pubspec.yaml b/pubspec.yaml
+index bdf81ef..01c2e6c 100644
+--- a/pubspec.yaml
++++ b/pubspec.yaml
+@@ -44,6 +44,7 @@ dependencies:
+ dev_dependencies:
+   flutter_test:
+     sdk: flutter
++    #flutter_launcher_icons: "^0.11.0"
+ 
+   # The "flutter_lints" package below contains a set of recommended lints to
+   # encourage good coding practices. The lint set provided by the package is
+@@ -66,6 +67,9 @@ flutter:
+   # To add assets to your application, add an assets section, like this:
+   assets:
+     - images/
++  
++
++
+   #   - images/a_dot_ham.jpeg
+ 
+   # An image asset can refer to one or more resolution-specific "variants", see

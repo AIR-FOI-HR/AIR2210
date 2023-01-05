@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:test_app/categories/categoryTable.dart';
 
+=======
+import 'package:test_app/categories/categoryArmchair.dart';
+import 'package:test_app/categories/categoryChair.dart';
+import 'package:test_app/categories/categorySofa.dart';
+>>>>>>> ejelacic_progress
 import 'package:test_app/categories/categoryWardrobe.dart';
 import 'package:test_app/categories/categoryBathroom.dart';
 import 'package:test_app/categories/categoryBench.dart';
+import 'package:test_app/categories/categoryBed.dart';
+import 'package:test_app/categories/categoryDoor.dart';
+import 'package:test_app/categories/categoryMirror.dart';
+import 'package:test_app/categories/categoryRack.dart';
+import 'package:test_app/categories/categoryTable.dart';
+import 'package:test_app/categories/categoryWindow.dart';
+
 import 'package:test_app/home_page.dart';
 import 'package:test_app/profile.dart';
-
 import 'package:firebase_core/firebase_core.dart';
+<<<<<<< HEAD
 import 'categories/categoryTable.dart';
+=======
+>>>>>>> ejelacic_progress
 import 'firebase_options.dart';
 
 void main() async {
@@ -45,7 +60,11 @@ class _RootPage extends State<RootPage> {
   Widget build(BuildContext context) {
     final List<Widget> _children = [
       const HomePage(),
+<<<<<<< HEAD
       const CategoryTable(),
+=======
+      const CategoryBench(),
+>>>>>>> ejelacic_progress
       const HomePage(),
       const ProfilePage(),
     ];

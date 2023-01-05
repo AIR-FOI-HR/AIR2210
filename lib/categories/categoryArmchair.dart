@@ -1,6 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Product {
   late String name;
@@ -14,17 +14,17 @@ class Product {
   }
 }
 
-class CategoryBench extends StatelessWidget {
-  const CategoryBench({super.key});
+class CategoryArmachair extends StatelessWidget {
+  const CategoryArmachair({super.key});
 
   @override
   Widget build(BuildContext context) {
     CollectionReference products =
-        FirebaseFirestore.instance.collection('benches');
+        FirebaseFirestore.instance.collection('armchairs');
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Klupe"),
+        title: const Text("Fotelje"),
         foregroundColor: Colors.white,
         backgroundColor: Colors.orange.shade800,
       ),
@@ -35,10 +35,7 @@ class CategoryBench extends StatelessWidget {
           if (snapshot.hasData) {
             // Collection data available, store it in a list
             List<DocumentSnapshot> documents = snapshot.data!.docs;
-            List data = documents.map((document) => {
-                      "data": document.data(), 
-                      "id": document.id
-                    }).toList();
+            List data = documents.map((document) => document.data()).toList();
             return ListView.builder(
               itemCount: data.length,
               itemBuilder: (context, index) {
@@ -56,12 +53,7 @@ class CategoryBench extends StatelessWidget {
                         decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.fill,
-<<<<<<< HEAD
-                              image: AssetImage(data[index]['data']['image'])
-                          ),
-=======
                               image: AssetImage(data[index]['image'])),
->>>>>>> ejelacic_progress
                         ),
                       ),
                       Column(
@@ -74,7 +66,7 @@ class CategoryBench extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  data[index]['data']['name'],
+                                  data[index]['name'],
                                   style: const TextStyle(fontSize: 25),
                                 ),
                               ),
@@ -83,7 +75,7 @@ class CategoryBench extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 30),
                               child: RatingBar.builder(
-                                initialRating: data[index]['data']['rating'].toDouble(),
+                                initialRating: data[index]['rating'].toDouble(),
                                 minRating: 1,
                                 direction: Axis.horizontal,
                                 allowHalfRating: true,
@@ -106,7 +98,7 @@ class CategoryBench extends StatelessWidget {
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  data[index]['data']['price'],
+                                  data[index]['price'],
                                   style: const TextStyle(
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold),
